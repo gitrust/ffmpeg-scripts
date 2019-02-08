@@ -11,10 +11,10 @@ set end=%3
 set neg=-avoid_negative_ts 1
 
 :: to cut from start
-ffmpeg -i %file% -ss %start% -c copy  %out%
+::ffmpeg -i %file% -ss %start% -c copy  %out%
 
 :: to cut from a start to an endpoint
-::ffmpeg -i %file% -ss %start% -c copy -t %duration%   %neg% %out%
+ffmpeg -i %file% -ss %start% -c copy -t %duration%   %neg% %out%
 
 
 :: ignore everything  after the first 35 seconds

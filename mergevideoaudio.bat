@@ -1,19 +1,14 @@
 @echo off
 
 ::
-:: Skript zum Video mit Audio zusammenfuehren
+:: Merge audio and video
 :: Argument 1: Video
 :: Argument 2: Audio 
 
-:: Pfad zu ffmpeg
-set FFMPEG=ffmpeg\bin\ffmpeg.exe
+set FFMPEG=ffmpeg.exe
 
-:: wenn Videodatei bereits Audio enthaelt
-:: ansonsten auskommentieren
+:: if video already contains audio -> comment out
 set MAPOPTIONS=-map 0:v -map 1:a
+set OUTPUT=video.mp4
 
-:: Ausgabe Videodatei
-set OUTPUT=ausgabe.mp4
-
-:: Konvertierung
 %FFMPEG% -i %1 -i %2 %MAPOPTIONS% -codec copy -shortest %OUTPUT%
