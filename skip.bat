@@ -1,6 +1,6 @@
 @echo off
 
-:: Skip video using time specification
+:: Copy video while skipping a part of it using time specification
 
 ::
 set input=%1
