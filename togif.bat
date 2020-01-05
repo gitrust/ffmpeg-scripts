@@ -7,7 +7,7 @@
 :: https://medium.com/@colten_jackson/doing-the-gif-thing-on-debian-82b9760a8483
 ::
 
-set OUTPUT=out2.gif
+set OUTPUT=image.gif
 :: image format:   image-0001.png
 set INPUT=video.avi
 set PARAMS=fps=10,scale=400:-1

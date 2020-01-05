@@ -1,4 +1,8 @@
 @echo off
 
+set INPUT=%1
+set OUTPUT=%2
+set BITRATE=192
+
 :: avi to mp3
-ffmpeg -i son_origine.avi -vn -ar 44100 -ac 2 -ab 192 -f mp3 %2.mp3
+ffmpeg -i "%INPUT%" -vn -ar 44100 -ac 2 -ab %BITRATE% -f mp3 "%OUTPUT%.mp3"
