@@ -1,5 +1,8 @@
 @echo off
 
+:: convert given video to mp4
+:: compatible with IPOD2 players
+
 set INPUT=%1
 set OUTPUT=%2
 

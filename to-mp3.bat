@@ -1,5 +1,7 @@
 @echo off
 
+:: Convert given audio to mp3
+
 set INPUT=%1
 set OUTPUT=%2
 set BITRATE=192

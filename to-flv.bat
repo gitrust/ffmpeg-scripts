@@ -1,6 +1,6 @@
 @echo off
 
-:: avi to flv
+:: avi to flv (Flash Video)
 set INPUT=%1
 set OUTPUT=%2
 

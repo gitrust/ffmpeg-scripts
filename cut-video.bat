@@ -1,6 +1,6 @@
 @echo off
 
-:: Cut video starting at start and with given duration
+:: Cut video starting at start, with given duration
 ::
 set file=%1
 set start=%2
