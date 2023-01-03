@@ -1,6 +1,7 @@
-*		    text=auto
+*		        text=auto
 
-*.sh  	text eol=lf
-*.bat		text eol=crlf
-*.md    text eol=lf
-*.ttf   binary
+*.sh  	    text eol=lf
+*.bat		    text eol=crlf
+*.md        text eol=lf
+Makefile    text eol=lf
+*.ttf       binary
