@@ -7,18 +7,9 @@
 :: https://medium.com/@colten_jackson/doing-the-gif-thing-on-debian-82b9760a8483
 ::
 
-set OUTPUT=image.gif
-:: image format:   image-0001.png
-set INPUT=video.avi
-set PARAMS=fps=10,scale=400:-1
-set TIME_PARAMS=-ss 1:35 -t 4
-set PALETTE=palette.png
+set OUTPUT=%1
+set INPUT=%VIDEO%.gif
+set TIME_PARAMS=-ss 0:01 -t 4
 
-:: generate a custom color palette
-ffmpeg %TIME_PARAMS% -i %INPUT%  -vf  "%PARAMS%:flags=lanczos,palettegen" %PALETTE%
-
-
-:: generate final gif
-ffmpeg  %TIME_PARAMS% -i %INPUT% -i %PALETTE% -filter_complex "%PARAMS%:flags=lanczos[x];[x][1:v]paletteuse" %OUTPUT%
-
-rm %PALETTE%
+:: generate final gif without intermediate palette image
+ffmpeg  %TIME_PARAMS% -i %INPUT% -vf "fps=10,scale=300:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" %OUTPUT%
