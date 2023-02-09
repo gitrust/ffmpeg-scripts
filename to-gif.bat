@@ -7,8 +7,8 @@
 :: https://medium.com/@colten_jackson/doing-the-gif-thing-on-debian-82b9760a8483
 ::
 
-set OUTPUT=%1
-set INPUT=%VIDEO%.gif
+set INPUT=%1
+set OUTPUT=%INPUT%.gif
 set TIME_PARAMS=-ss 0:01 -t 4
 
 :: generate final gif without intermediate palette image
