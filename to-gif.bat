@@ -1,7 +1,7 @@
 @echo off
 
 ::
-:: Create high quality gif from image sequence
+:: Create high quality gif
 ::
 :: Took parameters from
 :: https://medium.com/@colten_jackson/doing-the-gif-thing-on-debian-82b9760a8483
