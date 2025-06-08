@@ -17,7 +17,6 @@ local function list_video_files(files, folder, ext)
   local p = io.popen('dir ' .. pattern .. ' /b 2>nul')
 
   for file in p:lines() do
-    print("Add file "..file)
     table.insert(files, file)
   end
   p:close()
