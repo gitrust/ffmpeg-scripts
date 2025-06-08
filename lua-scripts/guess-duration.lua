@@ -14,6 +14,8 @@ print("Check folder " .. input_folder)
 -- into referenced files table
 local function list_video_files(files, folder, ext)
   local pattern = string.format('"%s\\*.%s"', folder, ext)
+  -- if some videofile extension does not exist in folder
+  -- we skip dir command output via 2>nul
   local p = io.popen('dir ' .. pattern .. ' /b 2>nul')
 
   for file in p:lines() do
