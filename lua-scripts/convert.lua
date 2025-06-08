@@ -39,8 +39,8 @@ end
 -- Extract date/time from filename
 -- which will be used for mp4 metadata
 local function parse_creation_time(filename)
-  -- Example: aufnahme.2007-06-17_10-41.00.avi
-  local date, time = filename:match("aufnahme%.([%d%-]+)_([%d%-%.]+)%.avi")
+  -- Example: record.2007-06-17_10-41.00.avi
+  local date, time = filename:match("record%.([%d%-]+)_([%d%-%.]+)%.avi")
   if date and time then
     time = time:gsub("-", ":"):gsub("%.", ":")
     return date .. "T" .. time
