@@ -3,6 +3,7 @@
 local input_folder = arg[1]
 local factor = tonumber(arg[2]) or 1.5  -- e.g. 1.5 of video length
 
+-- Usage
 if not input_folder then
   print("Usage: lua guess-duration.lua <folder> <factor>")
   os.exit(1)
